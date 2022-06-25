@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import {
-	Box, Text, Button,
+	Box, Text, Button, Container, Divider, Flex, Image, Stack,
 } from '@chakra-ui/react';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 
@@ -12,7 +12,7 @@ import ResponsiveImage from './../components/responsive-image';
 const Home = () => {
 	const headerCarouselHeight = ['400px', '400px', '630px', '900px'];
 	return (
-		<div>
+		<Box>
 			<Header />
 			<Box>
 				<Carousel
@@ -145,8 +145,148 @@ const Home = () => {
 					</Box>
 				</Carousel>
 			</Box>
-
-		</div>
+			<Box py={'20'} textAlign={'center'}>
+				<Container minW={['full', 'full', 'full', 'full', '8xl']}>
+					<Text
+						as={'h1'}
+						fontSize={['xl', 'xl', '2xl', '3xl']}
+						fontWeight={'bold'}
+						color={'blue.600'}
+						textAlign={'center'}
+					>
+						Our Awesome Features
+					</Text>
+					<Text
+						fontWeight={'thin'}
+						color={'gray.500'}
+						textAlign={'center'}
+						mt={2}
+					>
+						Find the different ways to make your journey better
+					</Text>
+					<Divider w={40} mx={'auto'} borderBottomWidth={3} mt={2} mb={'14'} />
+					<Flex justifyContent={'space-between'} pt={'20'} direction={['column', 'column', 'column', 'row']}>
+						<Box
+							boxShadow={'md'}
+							px={7}
+							py={12}
+							mx={['auto', 'auto', 'auto', 0]}
+							my={['5', '5', '5', '0']}
+							w={['100%', '100%', '80%', '30%']}
+							rounded={'md'}
+							minH={250}
+						>
+							<Image
+								boxSize='180px'
+								src='https://bit.ly/dan-abramov'
+								alt='Track pregnancy'
+								rounded={'full'}
+								mx={'auto'}
+							/>
+							<Text
+								color={'blue.600'}
+								mb={'3'}
+								mt={'16'}
+								fontSize={'xl'}
+								fontWeight={'semibold'}
+							>
+								STAGES
+							</Text>
+							<Text>
+								Learn more about what to expect during your pregnancy as well as after delivery. You could know more about symptoms, statistics, on call facilities, and so much more.
+							</Text>
+						</Box>
+						<Box
+							boxShadow={'md'}
+							px={7}
+							py={12}
+							mx={['auto', 'auto', 'auto', 0]}
+							my={['5', '5', '5', '0']}
+							w={['100%', '100%', '80%', '30%']}
+							rounded={'md'}
+							minH={250}>
+							<Image
+								boxSize='180px'
+								src='https://bit.ly/dan-abramov'
+								alt='Track pregnancy'
+								rounded={'full'}
+								mx={'auto'}
+							/>
+							<Text
+								color={'blue.600'}
+								mb={'3'}
+								mt={'16'}
+								fontSize={'xl'}
+								fontWeight={'semibold'}
+							>
+								COMMUNITY
+							</Text>
+							<Text>
+								Connect, share and learn from different experiences in the community section. You are not alone and there is someone outhere going through a similar situation.
+							</Text>
+						</Box>
+						<Box
+							boxShadow={'md'}
+							px={7}
+							py={12}
+							mx={['auto', 'auto', 'auto', 0]}
+							my={['5', '5', '5', '0']}
+							w={['100%', '100%', '80%', '30%']}
+							rounded={'md'}
+							minH={250}>
+							<Image
+								boxSize='180px'
+								src='https://bit.ly/dan-abramov'
+								alt='Track pregnancy'
+								rounded={'full'}
+								mx={'auto'}
+							/>
+							<Text
+								color={'blue.600'}
+								mb={'3'}
+								mt={'16'}
+								fontSize={'xl'}
+								fontWeight={'semibold'}
+							>
+								CHARITY
+							</Text>
+							<Text>
+								In case of need or financial assistance with respect to pregnancy, child birth, and post delivery, you can craete a request for funding so others can donate to help you reach your goal.
+							</Text>
+						</Box>
+					</Flex>
+				</Container>
+			</Box>
+			<Container py={'28'} minW={['full', 'full', 'full', 'full', '8xl']}>
+				<Stack spacing={'28'} direction='row'>
+					<Box w={'20%'}>
+						<Text
+							as={'h1'}
+							fontSize={['xl', 'xl', '2xl', '3xl']}
+							fontWeight={'bold'}
+							color={'blue.600'}
+							mb={'7'}
+						>
+							About Us
+						</Text>
+						<Text>
+							Learn more about what to expect during your pregnancy as well as after delivery. You could know more about symptoms, statistics, on call facilities, and so much more.
+						</Text>
+					</Box>
+					<Box>
+						<Text
+							as={'h1'}
+							fontSize={['xl', 'xl', '2xl', '3xl']}
+							fontWeight={'bold'}
+							color={'blue.600'}
+							textAlign={'center'}
+						>
+							About Us
+						</Text>
+					</Box>
+				</Stack>
+			</Container>
+		</Box>
 	)
 }
 
