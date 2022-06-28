@@ -3,6 +3,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import {
 	Box, Text, Button, Container, Divider, Flex, Image, Stack,
+	FormControl, FormLabel, Input, Textarea,
 } from '@chakra-ui/react';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 
@@ -145,7 +146,7 @@ const Home = () => {
 					</Box>
 				</Carousel>
 			</Box>
-			<Box py={'20'} textAlign={'center'}>
+			<Box py={'20'} textAlign={'center'} my={20}>
 				<Container minW={['full', 'full', 'full', 'full', '8xl']}>
 					<Text
 						as={'h1'}
@@ -257,35 +258,47 @@ const Home = () => {
 					</Flex>
 				</Container>
 			</Box>
-			<Container py={'28'} minW={['full', 'full', 'full', 'full', '8xl']}>
-				<Stack spacing={'28'} direction='row'>
-					<Box w={'20%'}>
-						<Text
-							as={'h1'}
-							fontSize={['xl', 'xl', '2xl', '3xl']}
-							fontWeight={'bold'}
-							color={'blue.600'}
-							mb={'7'}
-						>
-							About Us
-						</Text>
-						<Text>
-							Learn more about what to expect during your pregnancy as well as after delivery. You could know more about symptoms, statistics, on call facilities, and so much more.
-						</Text>
-					</Box>
-					<Box>
-						<Text
-							as={'h1'}
-							fontSize={['xl', 'xl', '2xl', '3xl']}
-							fontWeight={'bold'}
-							color={'blue.600'}
-							textAlign={'center'}
-						>
-							About Us
-						</Text>
-					</Box>
-				</Stack>
-			</Container>
+			<Box py={'10'} bg={'gray.50'} mb={10} px={['0', '0', '10%', '0']}>
+				<Container py={'28'} minW={['full', 'full', 'full', 'full', '8xl']}>
+					<Stack spacing={'28'} direction={['column', 'column', 'column', 'row']}>
+						<Box w={['100%', '100%', '100%', '35%']}>
+							<Text
+								as={'h1'}
+								fontSize={['xl', 'xl', '2xl', '3xl']}
+								fontWeight={'bold'}
+								color={'blue.600'}
+								mb={'7'}
+							>
+								About Us
+							</Text>
+							<Text>
+								Learn more about what to expect during your pregnancy as well as after delivery. You could know more about symptoms, statistics, on call facilities, and so much more.
+							</Text>
+						</Box>
+						<Box w={['100%', '100%', '100%', '75%']}>
+							<Flex flexDirection={['column', 'column', 'column', 'row']} justifyContent={'space-between'} mb={10}>
+								<FormControl isRequired w={['100%', '100%', '100%', '48%']}>
+									<FormLabel htmlFor='full-name' mb={2}>Full name</FormLabel>
+									<Input id='full-name' placeholder='Full name' />
+								</FormControl>
+								<FormControl isRequired w={['100%', '100%', '100%', '48%']} mt={['6', '6', '6', '0']}>
+									<FormLabel htmlFor='email' mb={2}>Email</FormLabel>
+									<Input id='email' placeholder='Email' type='email' />
+								</FormControl>
+							</Flex>
+							<FormControl>
+								<FormLabel htmlFor='email' mb={2}>Message</FormLabel>
+								<Textarea
+									placeholder='Send us a message and we will reply within 24h...'
+									size='md'
+									h={150}
+								/>
+							</FormControl>
+						</Box>
+					</Stack>
+				</Container>
+			</Box>
+
 		</Box>
 	)
 }
