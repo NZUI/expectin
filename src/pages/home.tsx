@@ -8,6 +8,7 @@ import {
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 
 import Header from './../components/header/header';
+import Footer from './../components/footer/footer';
 import ResponsiveImage from './../components/responsive-image';
 
 const Home = () => {
@@ -294,11 +295,34 @@ const Home = () => {
 									h={150}
 								/>
 							</FormControl>
+							<Button colorScheme='blue' variant='outline' size='md' w={['full', 'full', 'full', 'full', '25%']} mt={10} ml={['0', '0', '0', '0', '75%']}>
+								Send
+							</Button>
 						</Box>
 					</Stack>
 				</Container>
 			</Box>
-
+			<Box py={'20'} textAlign={'center'} my={20}>
+				<Container minW={['full', 'full', 'full', 'full', '8xl']}>
+					<Text
+						as={'h1'}
+						fontSize={['xl', 'xl', '2xl', '3xl']}
+						fontWeight={'bold'}
+						color={'blue.600'}
+						textAlign={'center'}
+						mb={'7'}
+					>
+						Our Charities
+					</Text>
+					<Text w={['full', 'full', 'full', 'full', '68%']} mx={'auto'}>
+						For organizations and NGOs currently doining amazing work to help women during and after thier pregnancies, this is a platform for you to create a profile where you can share your works and get donations to help with your various activities.
+					</Text>
+					<Button colorScheme='blue' size='md' w={['full', 'full', 'full', '50%', '25%']} my={'20'} mx={'auto'}>
+						Create Profile
+					</Button>
+				</Container>
+			</Box>
+			<Footer />
 		</Box>
 	)
 }
