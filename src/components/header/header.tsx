@@ -5,6 +5,7 @@ import {
 	DrawerCloseButton, VStack,
 } from '@chakra-ui/react';
 import { FiMenu } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 	const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
@@ -35,16 +36,18 @@ const Header = () => {
 								<Text fontSize={'md'}>
 									<Text as={'span'} ml={20}>Login</Text>
 									<Text as={'span'} mx={2}>|</Text>
-									<Text as={'span'}>Sign Up</Text>
+									<Link to={'/signup'}>
+										<Text as={'span'}>Sign Up</Text>
+									</Link>
 								</Text>
 							</HStack>
 					}
 				</Stack>
-			</Container>
+			</Container >
 
 
 			{/* Mobile Drawer */}
-			<Drawer placement={'top'} onClose={onClose} isOpen={isOpen}>
+			< Drawer placement={'top'} onClose={onClose} isOpen={isOpen} >
 				<DrawerOverlay />
 				<DrawerContent>
 					<DrawerCloseButton />
@@ -63,8 +66,8 @@ const Header = () => {
 						</VStack>
 					</DrawerBody>
 				</DrawerContent>
-			</Drawer>
-		</Box>
+			</Drawer >
+		</Box >
 	)
 }
 
