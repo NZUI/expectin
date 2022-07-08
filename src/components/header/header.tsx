@@ -2,10 +2,16 @@ import React from 'react';
 import {
 	Stack, Image, Container, HStack, Text, Box, useMediaQuery, useDisclosure,
 	Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, IconButton,
-	DrawerCloseButton, VStack,
+	DrawerCloseButton, VStack, Avatar, Menu, MenuButton, MenuItem, MenuList, Divider,
 } from '@chakra-ui/react';
-import { FiMenu } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+
+import { FiMenu } from 'react-icons/fi';
+import { BiUser } from 'react-icons/bi';
+import { BiLogOut } from 'react-icons/bi';
+import { GrUpgrade } from 'react-icons/gr';
+
+import NotificationBadge from '../notification-badge/notification-badge';
 
 const Header = () => {
 	const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
@@ -28,21 +34,118 @@ const Header = () => {
 							/>
 							:
 							// Desktop screens
-							<HStack spacing={10}>
-								<Text fontSize={'md'}>Home</Text>
-								<Text fontSize={'md'}>Features</Text>
-								<Text fontSize={'md'}>About Us</Text>
-								<Text fontSize={'md'}>Contact Us</Text>
-								<Text fontSize={'md'}>
-									<Link to={'/login'}>
-										<Text as={'span'} ml={20}>Login</Text>
-									</Link>
-									<Text as={'span'} mx={2}>|</Text>
-									<Link to={'/signup'}>
-										<Text as={'span'}>Sign Up</Text>
-									</Link>
-								</Text>
-							</HStack>
+							false ?
+								<HStack spacing={10}>
+									<Text fontSize={'md'}>Home</Text>
+									<Text fontSize={'md'}>Features</Text>
+									<Text fontSize={'md'}>About Us</Text>
+									<Text fontSize={'md'}>Contact Us</Text>
+									<Text fontSize={'md'}>
+										<Link to={'/login'}>
+											<Text as={'span'} ml={20}>Login</Text>
+										</Link>
+										<Text as={'span'} mx={2}>|</Text>
+										<Link to={'/signup'}>
+											<Text as={'span'}>Sign Up</Text>
+										</Link>
+									</Text>
+								</HStack>
+								:
+								<HStack spacing={10}>
+									<Menu
+										isLazy
+										flip={true}
+										direction='rtl'
+									>
+										<NotificationBadge count={5} />
+										<MenuList width={'250px'} h={'400px'} overflowY={'auto'}>
+											<Text w={'100%'} fontWeight={'semibold'} pl={'3'} mt={'3'}>Notifications</Text>
+											<MenuItem borderTopWidth={1}>
+												<Box flexDirection={'column'} textAlign={'left'} h={'75px'}>
+													<Text fontWeight={'medium'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={1}>
+														Lorem ipsum dolor sit amet, consectetur adipiscing
+													</Text>
+													<Text mt={'1'} color={'gray.400'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2}>
+														Complete information related to the pregnancy of the expectant / new mother
+													</Text>
+												</Box>
+											</MenuItem>
+											<MenuItem borderTopWidth={1}>
+												<Box flexDirection={'column'} textAlign={'left'} h={'75px'}>
+													<Text fontWeight={'medium'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={1}>
+														Lorem ipsum dolor sit amet, consectetur adipiscing
+													</Text>
+													<Text mt={'1'} color={'gray.400'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2}>
+														Complete information related to the pregnancy of the expectant / new mother
+													</Text>
+												</Box>
+											</MenuItem>
+											<MenuItem borderTopWidth={1}>
+												<Box flexDirection={'column'} textAlign={'left'} h={'75px'}>
+													<Text fontWeight={'medium'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={1}>
+														Lorem ipsum dolor sit amet, consectetur adipiscing
+													</Text>
+													<Text mt={'1'} color={'gray.400'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2}>
+														Complete information related to the pregnancy of the expectant / new mother
+													</Text>
+												</Box>
+											</MenuItem>
+											<MenuItem borderTopWidth={1}>
+												<Box flexDirection={'column'} textAlign={'left'} h={'75px'}>
+													<Text fontWeight={'medium'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={1}>
+														Lorem ipsum dolor sit amet, consectetur adipiscing
+													</Text>
+													<Text mt={'1'} color={'gray.400'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2}>
+														Complete information related to the pregnancy of the expectant / new mother
+													</Text>
+												</Box>
+											</MenuItem>
+											<MenuItem borderTopWidth={1}>
+												<Box flexDirection={'column'} textAlign={'left'} h={'75px'}>
+													<Text fontWeight={'medium'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={1}>
+														Lorem ipsum dolor sit amet, consectetur adipiscing
+													</Text>
+													<Text mt={'1'} color={'gray.400'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2}>
+														Complete information related to the pregnancy of the expectant / new mother
+													</Text>
+												</Box>
+											</MenuItem>
+											<MenuItem borderTopWidth={1}>
+												<Box flexDirection={'column'} textAlign={'left'} h={'75px'}>
+													<Text fontWeight={'medium'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={1}>
+														Lorem ipsum dolor sit amet, consectetur adipiscing
+													</Text>
+													<Text mt={'1'} color={'gray.400'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2}>
+														Complete information related to the pregnancy of the expectant / new mother
+													</Text>
+												</Box>
+											</MenuItem>
+											<MenuItem borderTopWidth={1}>
+												<Box flexDirection={'column'} textAlign={'left'} h={'75px'}>
+													<Text fontWeight={'medium'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={1}>
+														Lorem ipsum dolor sit amet, consectetur adipiscing
+													</Text>
+													<Text mt={'1'} color={'gray.400'} fontSize={'sm'} overflow={'hidden'} textOverflow={'ellipsis'} noOfLines={2}>
+														Complete information related to the pregnancy of the expectant / new mother
+													</Text>
+												</Box>
+											</MenuItem>
+											<Divider />
+											<MenuItem><Text textAlign={'center'} w={'100%'}>See All</Text></MenuItem>
+										</MenuList>
+									</Menu>
+									<Menu isLazy flip={true} direction='rtl'>
+										<MenuButton>
+											<Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
+										</MenuButton>
+										<MenuList>
+											<MenuItem icon={<BiUser />}>Profile</MenuItem>
+											<MenuItem icon={<GrUpgrade />}>Upgrade</MenuItem>
+											<Divider mt={5} />
+											<MenuItem icon={<BiLogOut />}>Logout</MenuItem>
+										</MenuList>
+									</Menu>
+								</HStack>
 					}
 				</Stack>
 			</Container >
