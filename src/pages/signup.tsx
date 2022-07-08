@@ -3,6 +3,8 @@ import {
 	Input, Button,
 } from '@chakra-ui/react';
 
+import { Link } from 'react-router-dom';
+
 const Signup = () => {
 	const BackgroundImage = require('./../assets/images/auth-image-1.jpeg');
 	return (
@@ -65,6 +67,16 @@ const Signup = () => {
 							>
 								Create Account
 							</Button>
+							<Text
+								fontSize={['smaller']}
+								textAlign={'center'}
+								mt={'4'}
+							>
+								Already have an account?
+								<Link to={'/login'}>
+									<Text as={'span'} color={'blue.500'}> Login.</Text>
+								</Link>
+							</Text>
 						</Box>
 					</GridItem>
 					<GridItem
@@ -86,14 +98,16 @@ const Signup = () => {
 							alignItems={'center'}
 						>
 							<Box>
-								<Text
-									color={'white'}
-									as={'h1'}
-									fontSize={'6xl'}
-									textAlign={'center'}
-								>
-									EXPECTIN
-								</Text>
+								<Link to={'/'}>
+									<Text
+										color={'white'}
+										as={'h1'}
+										fontSize={'6xl'}
+										textAlign={'center'}
+									>
+										EXPECTIN
+									</Text>
+								</Link>
 								<Text
 									color={'white'}
 									fontSize={'md'}

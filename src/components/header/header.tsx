@@ -34,7 +34,9 @@ const Header = () => {
 								<Text fontSize={'md'}>About Us</Text>
 								<Text fontSize={'md'}>Contact Us</Text>
 								<Text fontSize={'md'}>
-									<Text as={'span'} ml={20}>Login</Text>
+									<Link to={'/login'}>
+										<Text as={'span'} ml={20}>Login</Text>
+									</Link>
 									<Text as={'span'} mx={2}>|</Text>
 									<Link to={'/signup'}>
 										<Text as={'span'}>Sign Up</Text>
