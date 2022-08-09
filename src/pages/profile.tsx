@@ -11,8 +11,8 @@ const Profile = () => {
 	return (
 		<Box>
 			<Header />
-			<Container minW={['full', 'full', 'full', 'full', '8xl']}>
-				<Tabs defaultIndex={1}>
+			<Container minW={['full', 'full', 'full', 'full', '8xl']} h={'calc(100vh)'}>
+				<Tabs defaultIndex={1} mt={'20'}>
 					<Grid
 						my={'10'}
 						templateRows='repeat(1, 1fr)'
@@ -32,7 +32,7 @@ const Profile = () => {
 								<Text as={'h1'} color={'blue.600'} fontSize={'2xl'} fontWeight={'semibold'}>EXPECTIN</Text>
 							</Box>
 							<Divider my={'4'} />
-							<TabList flexDirection={'column'}>
+							<TabList flexDirection={'column'} borderBottomWidth={'0px'} minH={'550px'}>
 								<Tab flexDirection={'column'} px={0} my={'2'}>
 									<Box textAlign={'left'}>
 										<Text fontWeight={'semibold'} fontSize={'md'}>Personal Inforamtion</Text>
@@ -63,25 +63,25 @@ const Profile = () => {
 							<TabPanels>
 
 								<TabPanel>
-									<Text as={'h1'} fontWeight={'semibold'} fontSize={'4xl'}>Personal</Text>
+									<Text as={'h1'} fontWeight={'semibold'} fontSize={'3xl'}>Personal</Text>
 									<Flex mt={'4'} flexDirection={['column', 'column', 'column', 'row']} justifyContent={'space-between'} mb={7}>
 										<FormControl isRequired w={['100%', '100%', '100%', '48%']}>
 											<FormLabel htmlFor='full-name' mb={2}>First name</FormLabel>
 											<Input id='full-name' placeholder='Full name' borderColor={'gray.300'} />
 										</FormControl>
 										<FormControl isRequired w={['100%', '100%', '100%', '48%']}
-										mt={['4', '4', '4', '0']}>
+											mt={['4', '4', '4', '0']}>
 											<FormLabel htmlFor='last-name' mb={2}>Last name</FormLabel>
 											<Input id='last-name' placeholder='Last name' borderColor={'gray.300'} />
 										</FormControl>
 									</Flex>
 									<Flex flexDirection={['column', 'column', 'column', 'row']} justifyContent={'space-between'} mb={7} mt={'4'}>
 										<FormControl isRequired w={['100%', '100%', '100%', '48%']}>
-										<FormLabel htmlFor='email' mb={2}>Email</FormLabel>
+											<FormLabel htmlFor='email' mb={2}>Email</FormLabel>
 											<Input id='email' placeholder='Email' type='email' borderColor={'gray.300'} />
 										</FormControl>
 										<FormControl isRequired w={['100%', '100%', '100%', '48%']}
-										mt={['4', '4', '4', '0']}>
+											mt={['4', '4', '4', '0']}>
 											<FormLabel htmlFor='date-of-birth' mb={2}>Date of Birth</FormLabel>
 											<Input
 												placeholder="Select Date"
@@ -93,8 +93,8 @@ const Profile = () => {
 										</FormControl>
 									</Flex>
 									<Flex flexDirection={['column', 'column', 'column', 'row']} justifyContent={'space-between'} mb={7} mt={'4'}>
-										<FormControl  mb={2} w={['100%', '100%', '100%', '48%']}>
-										<FormLabel htmlFor='country' mb={2}>Country</FormLabel>
+										<FormControl mb={2} w={['100%', '100%', '100%', '48%']}>
+											<FormLabel htmlFor='country' mb={2}>Country</FormLabel>
 											<Select placeholder='Select country'>
 												<option value='cameroon'>Cameroon</option>
 												<option value='nigeria'>Nigeria</option>
@@ -126,10 +126,68 @@ const Profile = () => {
 								</TabPanel>
 
 								<TabPanel>
-									<Text as={'h1'} fontWeight={'semibold'} fontSize={'4xl'}>Pregnancy</Text>
+									<Text as={'h1'} fontWeight={'semibold'} fontSize={'3xl'}>Pregnancy</Text>
+									<Text fontSize={13} mt={'2'} mb={'5'}>This section sets up your personal journey in order to receive only information related to your current stage. In addition to that, you will be shown organizations who are targeting ladies in this particular stage</Text>
+									<Box>
+										<Flex mt={'4'} flexDirection={['column', 'column', 'column', 'row']} justifyContent={'space-between'} mb={7}>
+											<FormControl isRequired w={['100%', '100%', '100%', '48%']}>
+												<FormLabel mb={2}>How far along are you</FormLabel>
+												<Input borderColor={'gray.300'} />
+											</FormControl>
+											<FormControl isRequired w={['100%', '100%', '100%', '48%']}
+												mt={['4', '4', '4', '0']}>
+												<FormLabel mb={2}>Unit</FormLabel>
+												<Select placeholder='Select unit'>
+													<option value='day'>Days</option>
+													<option value='month'>Month(s)</option>
+													<option value='year'>Year(s)</option>
+												</Select>
+											</FormControl>
+										</Flex>
+										<Flex mt={'4'} flexDirection={['column', 'column', 'column', 'row']} justifyContent={'space-between'} mb={7}>
+											<FormControl w={['100%', '100%', '100%', '48%']}>
+												<FormLabel mb={2}>Emergency contact Number</FormLabel>
+												<Input borderColor={'gray.300'} type={'number'} />
+											</FormControl>
+											<FormControl w={['100%', '100%', '100%', '48%']}
+												mt={['4', '4', '4', '0']}>
+												<FormLabel mb={2}>Relation (How is the contact related to the expectant)</FormLabel>
+												<Input borderColor={'gray.300'} />
+											</FormControl>
+										</Flex>
+										<Flex mt={'4'} flexDirection={['column', 'column', 'column', 'row']} justifyContent={'space-between'} mb={7}>
+											<FormControl isRequired w={['100%', '100%', '100%', '48%']}>
+												<FormLabel mb={2}>Have you been pregnant prior to this pregnancy</FormLabel>
+												<Select placeholder='Select unit'>
+													<option value='yes'>Yes</option>
+													<option value='no'>No</option>
+												</Select>
+											</FormControl>
+											<FormControl isRequired w={['100%', '100%', '100%', '48%']}
+												mt={['4', '4', '4', '0']}>
+												<FormLabel mb={2}>How many kids do you currently have?</FormLabel>
+												<Input borderColor={'gray.300'} type={'number'} />
+											</FormControl>
+										</Flex>
+										<Button
+											bg={'blue.600'}
+											color={'white'}
+											my={'5'}
+											size='md'
+											borderColor={'blue.600'}
+											w={['full', 'full', 'full', 'full', '40%']} ml={['0', '0', '0', '0', '30%']}
+											_hover={{
+												borderWidth: 1,
+												color: 'blue.600',
+												backgroundColor: '#ffffff'
+											}}
+										>
+											Save
+										</Button>
+									</Box>
 								</TabPanel>
 								<TabPanel>
-									<Text as={'h1'} fontWeight={'semibold'} fontSize={'4xl'}>Account</Text>
+									<Text as={'h1'} fontWeight={'semibold'} fontSize={'3xl'}>Account</Text>
 								</TabPanel>
 							</TabPanels>
 						</GridItem>

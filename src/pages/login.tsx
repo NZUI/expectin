@@ -8,16 +8,8 @@ import { Link } from 'react-router-dom';
 const Login = () => {
 	const BackgroundImage = require('./../assets/images/auth-image-2.jpeg');
 	return (
-		<Box bg={'gray.50'} maxH={'calc(100vh)'}>
-			<Container
-				minW={['full', 'full', 'full', 'full', '8xl']}
-				position={'absolute'}
-				top={'24'}
-				left={0}
-				right={0}
-				bottom={0}
-				margin={'auto'}
-			>
+		<Box bg={'gray.50'} h={'calc(100vh)'} pt={['20%', '20%', '20%', '10%']}>
+			<Container minW={['full', 'full', 'full', 'full', '8xl']}>
 				<Grid
 					mx={['1%', '1%', '1%', '7%']}
 					templateRows='repeat(1, 1fr)'

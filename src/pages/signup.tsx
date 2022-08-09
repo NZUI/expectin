@@ -24,6 +24,7 @@ const Signup = () => {
 					templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(5, 1fr)']}
 					h={'700px'}
 					boxShadow={'lg'}
+					mt={'32'}
 				>
 					<GridItem colSpan={[1, 1, 1, 3]} roundedTopLeft={'md'} roundedBottomLeft={'md'}>
 						<Box
