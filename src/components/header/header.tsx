@@ -139,10 +139,16 @@ const Header = () => {
 											<Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
 										</MenuButton>
 										<MenuList>
-											<MenuItem icon={<BiUser />}>Profile</MenuItem>
+											<Link to={'/profile'}>
+												<MenuItem icon={<BiUser />}>
+													Profile
+												</MenuItem>
+											</Link>
 											<MenuItem icon={<GrUpgrade />}>Upgrade</MenuItem>
 											<Divider mt={5} />
-											<MenuItem icon={<BiLogOut />}>Logout</MenuItem>
+											<Link to={'/profile'}>
+												<MenuItem icon={<BiLogOut />}>Logout</MenuItem>
+											</Link>
 										</MenuList>
 									</Menu>
 								</HStack>
