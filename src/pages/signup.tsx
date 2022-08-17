@@ -63,14 +63,14 @@ const Signup = () => {
 								<Input placeholder='Password' type='password' borderColor={'gray.300'} />
 							</FormControl>
 							<Button
-								bg={'blue.600'}
+								bg={'pink.400'}
 								color={'white'}
 								size='md'
-								borderColor={'blue.600'}
+								borderColor={'pink.400'}
 								w={['full', 'full', 'full', 'full', '50%']} ml={['0', '0', '0', '0', '25%']}
 								_hover={{
 									borderWidth: 1,
-									color: 'blue.600',
+									color: 'pink.400',
 									backgroundColor: '#ffffff'
 								}}
 							>

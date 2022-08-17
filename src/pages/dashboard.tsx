@@ -1,8 +1,9 @@
 import {
-	Box, Container, Text, Flex, Avatar,
+	Box, Container, Text, Flex, Avatar, HStack,
 } from '@chakra-ui/react';
 import Footer from '../components/footer/footer';
 import Header from '../components/header/header';
+import Pill from '../components/pill/pill';
 
 const Dashboard = () => {
 	return (
@@ -20,10 +21,10 @@ const Dashboard = () => {
 					</Box>
 				</Flex>
 				<Flex mt={'7'} alignItems={'center'} justifyContent={'space-between'}>
-					<Box borderRadius={10} w='45%' minH='200px' bgGradient='linear(to-b, green.100, blue.400)' p={'10'}>
+					<Box borderRadius={10} w='45%' minH='200px' bgGradient='linear(to-b, blue.200, pink.300)' p={'10'}>
 						<Text fontSize={'3xl'} fontWeight={'semibold'}>2nd Trimester</Text>
-						<Text color={'gray.500'} mb={'5'}>27 weeks and 5 days</Text>
-						<Flex mt={'16'} color={'white'} alignItems={'center'} justifyContent={'space-between'}>
+						<Text color={'white'} mb={'5'}>27 weeks and 5 days</Text>
+						<Flex mt={'16'} color={'white'} alignItems={'center'} justifyContent={'space-between'} overflowX={'auto'}>
 							<Text w={'150px'}>Health: On Track</Text>
 							<Avatar src='https://bit.ly/kent-c-dodds' size={'xs'} />
 							<Avatar src='https://bit.ly/kent-c-dodds' size={'xs'} />
@@ -52,6 +53,16 @@ const Dashboard = () => {
 						</Flex>
 					</Box>
 				</Flex >
+				<Box mt={20}>
+					<HStack spacing={8} overflowX={'auto'}>
+						<Pill active={true} description={'description'} />
+						<Pill description={'Self Care'} />
+						<Pill description={'Common symptoms'} />
+						<Pill description={'Exercises'} />
+						<Pill description={'Doctors around'} />
+					</HStack>
+
+				</Box>
 			</Container >
 			<Footer />
 		</Box >

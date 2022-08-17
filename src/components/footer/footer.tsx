@@ -25,7 +25,7 @@ const Footer = () => {
 						<FormControl isRequired w={'100%'}>
 							<Input id='email' placeholder='Email' />
 						</FormControl>
-						<Button color='blue.600' bg={'white'} size='md' w={['full', 'full', '25%', '50%', '25%']} mt={'3'} ml={['0', '0', '75%', '50%', '75%']}>
+						<Button color='pink.400' bg={'white'} size='md' w={['full', 'full', '25%', '50%', '25%']} mt={'3'} ml={['0', '0', '75%', '50%', '75%']}>
 							Subscribe
 						</Button>
 					</GridItem>

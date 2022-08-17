@@ -29,7 +29,7 @@ const Profile = () => {
 								display={'flex'}
 								alignItems={'center'}
 							>
-								<Text as={'h1'} color={'blue.600'} fontSize={'2xl'} fontWeight={'semibold'}>EXPECTIN</Text>
+								<Text as={'h1'} color={'pink.400'} fontSize={'2xl'} fontWeight={'semibold'}>EXPECTIN</Text>
 							</Box>
 							<Divider my={'4'} />
 							<TabList flexDirection={'column'} borderBottomWidth={'0px'} minH={'550px'}>
@@ -109,15 +109,15 @@ const Profile = () => {
 										</FormControl>
 									</Flex>
 									<Button
-										bg={'blue.600'}
+										bg={'pink.400'}
 										color={'white'}
 										my={'5'}
 										size='md'
-										borderColor={'blue.600'}
+										borderColor={'pink.400'}
 										w={['full', 'full', 'full', 'full', '40%']} ml={['0', '0', '0', '0', '30%']}
 										_hover={{
 											borderWidth: 1,
-											color: 'blue.600',
+											color: 'pink.400',
 											backgroundColor: '#ffffff'
 										}}
 									>
@@ -170,15 +170,15 @@ const Profile = () => {
 											</FormControl>
 										</Flex>
 										<Button
-											bg={'blue.600'}
+											bg={'pink.400'}
 											color={'white'}
 											my={'5'}
 											size='md'
-											borderColor={'blue.600'}
+											borderColor={'pink.400'}
 											w={['full', 'full', 'full', 'full', '40%']} ml={['0', '0', '0', '0', '30%']}
 											_hover={{
 												borderWidth: 1,
-												color: 'blue.600',
+												color: 'pink.400',
 												backgroundColor: '#ffffff'
 											}}
 										>

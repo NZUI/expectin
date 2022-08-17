@@ -27,7 +27,7 @@ const NotificationBadge = ({ count }: { count: number }) => {
 					top={'6px'}
 					right={'1px'}
 					fontSize={'0.8rem'}
-					bgColor={'blue.600'}
+					bgColor={'pink.400'}
 					zIndex={9999}
 					size={'20px'}
 				>

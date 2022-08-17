@@ -47,7 +47,7 @@ const Home = () => {
 								as={'h1'}
 								fontSize={['xl', 'xl', '2xl', '3xl']}
 								noOfLines={2}
-								color={'blue.600'}
+								color={'pink.400'}
 								fontWeight={'black'}
 								mb={10}
 							>
@@ -56,7 +56,7 @@ const Home = () => {
 							<Button
 								py={'6'}
 								px={'16'}
-								color={'blue.600'}
+								color={'pink.400'}
 								bg={'white'}
 								rounded={'md'}
 								rightIcon={<BsArrowRight size={25} />}
@@ -96,7 +96,7 @@ const Home = () => {
 							<Button
 								py={'6'}
 								px={'16'}
-								color={'blue.600'}
+								color={'pink.400'}
 								bg={'white'}
 								rounded={'md'}
 								rightIcon={<BsArrowRight size={25} />}
@@ -136,7 +136,7 @@ const Home = () => {
 							<Button
 								py={'6'}
 								px={'16'}
-								color={'blue.600'}
+								color={'pink.400'}
 								bg={'white'}
 								rounded={'md'}
 								leftIcon={<BsArrowLeft size={25} />}
@@ -153,7 +153,7 @@ const Home = () => {
 						as={'h1'}
 						fontSize={['xl', 'xl', '2xl', '3xl']}
 						fontWeight={'bold'}
-						color={'blue.600'}
+						color={'pink.400'}
 						textAlign={'center'}
 					>
 						Our Awesome Features
@@ -186,7 +186,7 @@ const Home = () => {
 								mx={'auto'}
 							/>
 							<Text
-								color={'blue.600'}
+								color={'pink.400'}
 								mb={'3'}
 								mt={'16'}
 								fontSize={'xl'}
@@ -215,7 +215,7 @@ const Home = () => {
 								mx={'auto'}
 							/>
 							<Text
-								color={'blue.600'}
+								color={'pink.400'}
 								mb={'3'}
 								mt={'16'}
 								fontSize={'xl'}
@@ -244,7 +244,7 @@ const Home = () => {
 								mx={'auto'}
 							/>
 							<Text
-								color={'blue.600'}
+								color={'pink.400'}
 								mb={'3'}
 								mt={'16'}
 								fontSize={'xl'}
@@ -267,7 +267,7 @@ const Home = () => {
 								as={'h1'}
 								fontSize={['xl', 'xl', '2xl', '3xl']}
 								fontWeight={'bold'}
-								color={'blue.600'}
+								color={'pink.400'}
 								mb={'7'}
 							>
 								About Us
@@ -308,7 +308,7 @@ const Home = () => {
 						as={'h1'}
 						fontSize={['xl', 'xl', '2xl', '3xl']}
 						fontWeight={'bold'}
-						color={'blue.600'}
+						color={'pink.400'}
 						textAlign={'center'}
 						mb={'7'}
 					>
